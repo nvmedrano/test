@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class intive_fdv_GoogleExercise {
+public class googleSeleniumPage {
 
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -30,8 +30,10 @@ public class intive_fdv_GoogleExercise {
 		
 		//Tomo el elemento de busqueda
 		WebElement searchBox = driver.findElement(By.id("lst-ib"));
+		
 		//Ingreso la palabra o frase a buscar
 		searchBox.sendKeys(searchFor);
+		
 		//Presiono ENTER
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 		            
@@ -40,6 +42,7 @@ public class intive_fdv_GoogleExercise {
 		driver.findElement(By.linkText("Selenium - Web Browser Automation")).click();
 		
 		//Me aseguro que ingreso al link correcto
+		
 		expectedTitle = "Selenium - Web Browser Automation";
 		actualTitle = driver.getTitle();
 
